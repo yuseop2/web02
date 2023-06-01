@@ -1,0 +1,485 @@
+
+
+
+
+
+  
+<!DOCTYPE html>
+<html>
+<head>
+
+ 
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- 문서 정보 등록 -->
+<!-- 검색엔진 최적화(Search Engine Optimization) : SEO -->
+<meta name="subject" content="판다샵">
+<meta name="keywords" content="책방, 교과서, 서적, 종류 ,ㅣ 소설, 시">
+<meta name="description" content="교과서, 서적, 소설, 시">
+<meta name="author" content="yuseop2">
+
+<!-- 파비콘(favorite icon) 설정 /제작사이트 / 어플아이콘 --> 
+<link rel="shortcut icon"  href="/pro02/img/favi/favicon.ico">
+
+<!-- 오픈그래프 설정 -->
+<!-- https://yuseop2.githube.is/web1 입력해서 확인 가능 -->
+<meta name="og:site_name" content="사이트이름">
+<meta name="og:title" content="포트폴리오 - CJ프레시웨이">
+<meta name="og:description" content="CJ프레시웨이는 CJ 식품의 전반적인 정보를 공유합니다">
+<meta name="og:url" content="https://yuseop2.githube.is/pro02">
+<meta name="og:image" content="S{common_path}/image/og_screen.jpg">
+
+<!-- 기본 폰트 및 초기화 로딩 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
+<!-- 스타일 초기화 로딩 -->
+<!-- reset.css나 normalize.css를 CDN 또는 다운로드 받아 link로 연결 -->
+<link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" rel="stylesheet">
+
+<!-- jquery 로딩-->
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+<title>제품 구매</title>
+<style>
+.container-fluid { width:1280px; }
+th { width: 200px;}
+td > img { width: 500px; height: 500px;}
+</style>
+<script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.1.5.js"></script>
+</head>
+<body>
+<header id="hd" class="container">
+    <div class="container-fluid">
+        <nav id="tnb" class="navbar navbar-default">
+            <ul class="nav navbar-nav navbar-right" style="padding-right:40px">								
+                <li><a href="http://127.0.0.1:5500/user/UserLogin.html">로그인</a></li>
+                <li><a href="http://127.0.0.1:5500/user/UserTerms.html">회원가입</a></li>
+                <li><a href="http://127.0.0.1:5500/user/MyPage.html">마이페이지</a></li>					
+                <li><a href="http://127.0.0.1:5500/user/MyBasket.html">장바구니</a></li>
+                <li><a href="http://127.0.0.1:5500/user/MySalesList.html">구매내역</a></li>
+                <li><a href="http://127.0.0.1:5500/index.html">로그아웃</a></li>													
+            </ul>
+        </nav>
+    </div>
+    <div class="container-fluid" >	
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand"  href="http://127.0.0.1:5500/index.html">MYSHOP</a>
+            </div>		
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">		       		        
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">사료 <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="http://127.0.0.1:5500/product/ProductList_1.html">어덜트</a></li>
+                            <li><a href="http://127.0.0.1:5500/product/ProductList_1.html">퍼피</a></li>
+                            <li><a href="http://127.0.0.1:5500/product/ProductList_1.html">시니어</a></li>
+                            <li><a href="http://127.0.0.1:5500/product/ProductList_1.html">소프트사료</a></li>
+                            <li><a href="http://127.0.0.1:5500/product/ProductList_1.html">습식</a></li>
+                            <li><a href="http://127.0.0.1:5500/product/ProductList_1.html">샘플</a></li>		           
+                        </ul>
+                    </li>		          		       
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">간식 <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="http://127.0.0.1:5500/product/ProductList_1.html">수제간식</a></li>
+                        <li><a href="http://127.0.0.1:5500/product/ProductList_1.html">덴탈껌</a></li>
+                        <li><a href="http://127.0.0.1:5500/product/ProductList_1.html">뼈간식</a></li>
+                        <li><a href="http://127.0.0.1:5500/product/ProductList_1.html">개껌</a></li>
+                        <li><a href="http://127.0.0.1:5500/product/ProductList_1.html">영양제</a></li>
+                        <li><a href="http://127.0.0.1:5500/product/ProductList_1.html">육포/저키</a></li>
+                        <li><a href="http://127.0.0.1:5500/product/ProductList_1.html">캔/파우치</a></li>
+                        <li><a href="http://127.0.0.1:5500/product/ProductList_1.html">우유/음료</a></li>		
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">건강관리 <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="http://127.0.0.1:5500/product/ProductList_1.html">위생용품</a></li>
+                        <li><a href="http://127.0.0.1:5500/product/ProductList_1.html">칫솔/치약</a></li>
+                        <li><a href="http://127.0.0.1:5500/product/ProductList_1.html">미용/관리</a></li>
+                        <li><a href="http://127.0.0.1:5500/product/ProductList_1.html">목용용품</a></li>
+                        <li><a href="http://127.0.0.1:5500/product/ProductList_1.html">산책용품</a></li>
+                        <li><a href="http://127.0.0.1:5500/product/ProductList_1.html">사료통/급식기</a></li>
+                        <li><a href="http://127.0.0.1:5500/product/ProductList_1.html">넥카라/수술</a></li>
+                        <li><a href="http://127.0.0.1:5500/product/ProductList_1.html">스텝/매트</a></li>		
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">기타용품 <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="http://127.0.0.1:5500/product/ProductList_1.html">배변용품</a></li>
+                        <li><a href="http://127.0.0.1:5500/product/ProductList_1.html">장난감</a></li>
+                        <li><a href="http://127.0.0.1:5500/product/ProductList_1.html">훈련용품</a></li>
+                        <li><a href="http://127.0.0.1:5500/product/ProductList_1.html">하우스/방석</a></li>
+                        <li><a href="http://127.0.0.1:5500/product/ProductList_1.html">이동장/유모차</a></li>
+                        <li><a href="http://127.0.0.1:5500/product/ProductList_1.html">가방/카시트</a></li>
+                        <li><a href="http://127.0.0.1:5500/product/ProductList_1.html">의류/악세사리</a></li>
+                        <li><a href="http://127.0.0.1:5500/product/ProductList_1.html">파티</a></li>		
+                    </ul>
+                </li>	
+                <li class="dropdown">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">커뮤니티 <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="http://127.0.0.1:5500/notice/NoticeList.html">Notice - 공지사항</a></li>
+                        <li><a href="http://127.0.0.1:5500/faq/FaqList.html">FAQ - 자주하는 질문</a></li>
+                        <li><a href="http://127.0.0.1:5500/qna/QnaList.html">QnA - 묻고 답하기</a></li>			         
+                    </ul>
+                    </li>	   
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://127.0.0.1:5500/admin/MemberList.html">회원 관리</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">상품/판매 관리 <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">		          
+                    <li><a href="http://127.0.0.1:5500/admin/AdminProductList.html">상품 관리</a></li>		          
+                    <li><a href="http://127.0.0.1:5500/admin/AdminBasketList.html">장바구니 관리</a></li>
+                        <li><a href="http://127.0.0.1:5500/admin/Survey.html">배송 관리</a></li>		        
+                    </ul>
+                </li>
+                <li class="dropdown" style="padding-right:30px; margin-right:30px;">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">글 관리 <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                    <li><a href="http://127.0.0.1:5500/notice/NoticeList.html">Notice - 공지사항 관리</a></li>
+                    <li><a href="http://127.0.0.1:5500/faq/FaqList.html">FAQ - 자주하는 질문 관리</a></li>
+                    <li><a href="http://127.0.0.1:5500/qna/QnaList.html">QnA - 묻고 답하기 관리</a></li>		            
+                    <li><a href="http://127.0.0.1:5500/admin/AdminReviewList.html">Review - 이용후기 관리</a></li>		          
+                    </ul>
+                </li>
+                </ul>	
+            </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    </div>
+</header>
+<div class="content" style="padding-top:30px; margin-top:30px; border-top:3px solid #333; min-height:500px;">
+	<div class="container-fluid">
+		<h2>제품 구매</h2>
+		<p>제품을 구매합니다.</p>
+		<form action="/pro02/AddPayment.do" method="POST" onsubmit="return payCheck(this)">
+			<h3>구매 제품 정보</h3>
+			<table class="table">
+				<tbody>
+					<tr>
+						<th>상품명</th>
+						<td>더텐 - 소프트
+							<input type="hidden" id="p_name" name="p_name" value="더텐 - 소프트">
+							<input type="hidden" id="cate" name="cate" value="0104">
+							<input type="hidden" id="p_code" name="p_code" value="01040001">
+							<input type="hidden" id="id" name="id" value="lys24">
+							<input type="hidden" id="name" name="name" value="이유섭">
+							<input type="hidden" id="email" name="email" value="lys24@naver.com">
+							<input type="hidden" id="phone" name="phone" value="01012123434">
+							<input type="hidden" id="addr" name="addr" value="경기 고양시 일산동구 하늘마을1로 25 아파트">
+							<input type="hidden" id="b_num" name="b_num" value="10002">
+						</td>
+					</tr>
+					<tr>
+						<th>용량</th><td>3kg</td>
+					</tr>
+					<tr>
+						<th>상품 설명</th><td>먹기 편한 부드러운 사료</td>
+					</tr>
+					<tr>
+						<th>구매 가격</th><td>70000.0
+						<input type="hidden" id="price" name="price" value="70000.0"></td>
+					</tr>
+					<tr>
+						<th><label for="amount">수량</label></th>
+						<td>
+							구매 가능 수량 : <strong>100</strong><br>
+							<input type="number" name="amount" id="amount" value="1" min="0" max="100" title="1~500" class="form-control" required>
+						</td>
+					</tr>
+					<tr>
+						<th>상품 이미지</th>
+						<td><img src='/pro02/product/img/F-SO001.png' alt="더텐 - 소프트"/></td>
+					</tr>
+				</tbody>
+			</table>
+			<hr>
+			<h3>배송 정보</h3>
+			<table class="table">
+				<tbody>
+					<tr>
+						<th>배송지 주소</th>
+						<td>
+							<input type="text" name="address1" id="address1" placeholder="기본 주소 입력" class="form-control" required /><br>
+							<input type="text" name="address2" id="address2" placeholder="상세 주소 입력" class="form-control" required /><br>
+							<input type="text" name="postcode" id="postcode" style="width:160px;float:left;margin-right:20px;" placeholder="우편번호" class="form-control" required>
+							<button type="button" id="post_btn" onclick="findAddr()" class="btn btn-primary" style="margin-bottom:36px;">우편번호 검색</button>
+						</td>
+					</tr>
+					<tr>
+						<th>받는 사람 연락처</th>
+						<td>			
+							<input type="tel" name="phone" id="phone" required>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<hr>
+			<h3>결제 정보</h3>			
+			<table class="table">
+				<tbody>
+					<tr>
+						<th>결제 수단</th>
+						<td>
+							<input type="hidden" name="conf" id="p_method">
+							<input type="radio" name="p_method" id="p_method1" value="신용카드" class="p_method" checked><label for="p_method1">신용카드</label> &nbsp;
+							<input type="radio" name="p_method" id="p_method2" value="체크카드" class="p_method"><label for="p_method2">체크카드</label> &nbsp;
+							<input type="radio" name="p_method" id="p_method3" value="계좌이체" class="p_method"><label for="p_method3">계좌이체</label> &nbsp;
+						</td>
+					</tr>
+					<tr>
+						<th><label for="paycom" id="paycomLb">결제사</label></th>
+						<td>			
+							<select name="paycom" id="paycom" class="form-control" required>
+								<option value="">선택안함</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th><label for="paycom" id="ptnumLb">결제 번호</label></th>
+						<td>			
+							<input type="text" name="m_num" id="m_num" class="form-control" required>
+							<input type="hidden" name="tot_price" id="tot_price">
+							<input type="hidden" name="payck" id="payck" value="no">
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="btn-group" >
+				<button type="button" id="pay" class="btn btn-primary">결제하기</button>
+			</div>
+			<hr>
+			<div class="btn-group">
+				<input type="submit" value="상품 구매 완료" class="btn btn-danger">
+				<a href="javascript:history.go(-1)" class="btn btn-primary">뒤로 가기</a>				
+			</div>
+		</form>
+		<script>
+		function findAddr() {
+			new daum.Postcode({
+				oncomplete: function(data) {
+					console.log(data);
+					var roadAddr = data.roadAddress;
+					var jibunAddr = data.jibunAddress;
+					document.getElementById("postcode").value = data.zonecode;
+					if(roadAddr !== '') {
+						document.getElementById("address1").value = roadAddr;				
+					} else if(jibunAddr !== ''){
+						document.getElementById("address1").value = jibunAddr;
+					}
+					document.getElementById("address2").focus();
+				}
+			}).open();
+		}
+		</script>
+		<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+		<script>
+		//결제모듈 연동
+		$(document).ready(function(){
+			var totalPay=0;
+			var proName;
+			$("#pay").click(function(){
+				proName = $("#p_name").val();
+				if($("#amount").val()!="") {
+					totalPay = parseInt($("#price").val()) * parseInt($("#amount").val());
+				} else {
+					alert("구매할 수량을 입력하지 않으셨습니다.");
+					$("#amount").focus();
+					return;
+				}
+				alert("결제할 금액 : "+totalPay);
+				//상품명_현재시간
+	 			var d = new Date();
+				var date = d.getFullYear()+''+(d.getMonth()+1)+''+d.getDate()+''+d.getHours()+''+d.getMinutes()+''+d.getSeconds();
+				IMP.init('imp31083748'); // 결제 API를 사용하기 위한 코드 입력!
+				IMP.request_pay({		//결제 요청
+					merchant_uid : $("#p_name").val() + '_' + date, //상점 거래 ID
+					name : $("#p_name").val(),				// 결제 명
+					amount : totalPay,					// 결제금액
+					buyer_email : $("#email").val(), // 구매자 email
+					buyer_name : $("#name").val(),				// 구매자 이름
+					buyer_tel : $("#phone").val(),		// 구매자 전화번호
+					buyer_addr : $("#addr").val(),		// 구매자 주소
+					buyer_postcode : $("#postcode").val()			// 구매자 우편번호
+					
+					//지정 가능한 속성
+					//https://docs.iamport.kr/sdk/javascript-sdk 참조
+					//pg : 결제 프로그램 코드
+					//pay_method : 결제 방법
+					//escrow : 에스크로 결제창 호출 여부
+					//merchant_uid : 상점 거래 ID
+					//name : 주문명
+					//amount : 결제 금액
+					//custom_data : 가맹점 임의 지정 데이터
+					//tax_free : 면세공급가액
+					//currency : 거래 통화
+					//language : 결제창 화면의 언어
+					//buyer_name : 주문자명
+					//buyer_tel : 주문자 연락처
+					//buyer_email : 주문자 이메일
+					//buyer_addr : 주문자 주소
+					//buyer_postcode : 주문자 우편번호
+					//display : 결제 화면 구성 설정
+					//display.card_quota : 50,000원 이상 금액 결제시 할부 개월 수 옵션
+					//digital : 결제 상품이 컨텐츠인지 여부(휴대폰 소액 결제시 필수)
+					//v_bank_due : 가상계좌 입금기한
+					//m_redirect_url : 리다이렉션 방식으로 호출된 결제창에서 결제 후 이동 될 주소
+					//app_scheme : 모바일 앱 결제 중 앱 복귀를 위한 URL
+					//biz_num : 계약된 사업자등록번호 10자리
+					
+				}, function(rsp){
+					if(rsp.success){
+						console.log(rsp);
+						var msg = '결제가 완료 되었습니다.';
+						var r1 = '고유 아이디 : ' +rsp.imp_uid;
+						var r2 = '상점 거래 아이디 : ' +rsp.merchant_uid;
+						var r3 = '결제 금액 : ' +rsp.paid_amount;
+						var r4 = '카드 승인 번호 : '+rsp.apply_num;
+						
+						//반환 가능한 속성
+						//https://docs.iamport.kr/sdk/javascript-sdk 참조
+						//rsp.success : 결제 성공 여부
+						//rsp.error_code : 결제 실패시 에러 코드
+						//rsp.error_msg : 결제 실패시 에러 메시지
+						//rsp.imp_uid : 아임포트 고유 결제번호
+						//rsp.merchant_uid : 가맹점 고유 주문번호
+						//rsp.pay_method : 결제 방법
+						//rsp.paid_amount : 결제 금액
+						//rsp.status : 결제 상태
+						//rsp.name : 주문명
+						//rsp.pg_provider : 일반 결제 승인된 PG사
+						//rsp.emb_pg_provider : 간편 결제 승인된 PG사 
+						//rsp.pg_tid : PG사 거래고유번호
+						//rsp.buyer_name : 주문자 이름
+						//rsp.buyer_email : 주문자 Email
+						//rsp.buyer_tel : 주문자 연락처
+						//rsp.buyer_addr : 주문자 주소
+						//rsp.buyer_postcode : 주문자 우편번호
+						//rsp.custom_data : 가맹점 임의 지정 데이터
+						//rsp.paid_at : 결제승인시각
+						//rsp.receipt_url : PG사에서 발행되는 거래 매출전표 URL
+						//rsp.apply_num : 카드사 승인번호
+						//rsp.vbank_num : 가상계좌 입금계좌번호
+						//rsp.vbank_name : 가상계좌 은행명
+						//rsp.vbank_holder : 가상계좌 예금주
+						//rsp.vbank_date : 가상계좌 입금기한
+						
+						/* 아래 내용은 각주 처리 해제 */
+						//$("#payck").val("yes");
+						//$("#payamount").val(rsp.paid_amount);
+						//$("#paymethod").val(rsp.pay_method);
+						//$("#paycom").val(rsp.pg_provider);
+						//$("#ptnum").val(rsp.apply_num);
+						//alert(msg);
+						//$("#paymentResult").html(r1+"<br>"+r2+"<br>"+r3+"<br>"+r4);
+					} else{
+						//$("#paymentResult").html('결제실패<br>'+'에러내용 : ' +rsp.error_msg);
+					}
+					//테스트용이므로 실패시에도 그냥 통과시킴 그러므로 실제 사용시에는 아래 내용은 각주 처리하든지 지워야함
+					$("#payck").val("yes");
+					$("#tot_price").val(totalPay);
+					//$("#ptype").val("카드");
+					//$("#paycom").val("삼성카드");
+					//$("#ptnum").val("123-1234-1234-1278");
+				});
+	 		});
+		});
+		</script>
+		<script>
+		$(document).ready(function(){
+			var card = ["BC카드", "KB국민카드", "삼성카드", "신한카드", "우리카드", "하나카드", "롯데카드", "현대카드", "NH농협카드"];
+			var bank = ["IBK기업은행", "하나은행", "농협은행", "우리은행", "우체국", "새마을금고", "신협", "한국씨티은행", "수협은행", "대구은행", "부산은행", "케이뱅크", "토스뱅크", "카카오뱅크"];
+			$("input[name='p_method']").change(function(){
+				// 신용카드 결제 선택 시.
+				if($("#p_method1:checked").val() == '신용카드'){
+					$("#p_method").val("신용카드");
+					$('#paycomLb').text("신용카드사 또는 종류");
+					$('#ptnumLb').text("신용카드번호");
+					$("#paycom").empty();
+					$("#paycom").append("<option value=''>선택안함</option>");
+					for(var key in card){
+						$("#paycom").append("<option value='"+card[key]+"'>"+card[key]+"</option>");
+					}
+					$('#m_num').val("");
+				}	
+				// 체크카드 결제 선택 시.
+				else if($("#p_method2:checked").val() == '체크카드'){
+					$("#p_method").val("체크카드");
+					$('#paycomLb').text("체크카드사 또는 종류");
+					$('#ptnumLb').text("체크카드번호");
+					$("#paycom").empty();
+					$("#paycom").append("<option value=''>선택안함</option>");
+					for(var key in card){
+						$("#paycom").append("<option value='"+card[key]+"'>"+card[key]+"</option>");
+					}
+					$('#m_num').val("");
+				}
+				// 계좌이체 결제 선택 시.
+				else if($("#p_method3:checked").val() == '계좌이체'){
+					$("#p_method").val("계좌이체");
+					$('#paycomLb').html("입금 은행 : 농협,<br> 예금주 : 더조은책방");
+					$('#ptnumLb').html("계좌 번호 :<br> 217-23-25639");
+					$("#paycom").empty();
+					$("#paycom").append("<option value=''>선택안함</option>");
+					for(var key in bank){
+						$("#paycom").append("<option value='"+bank[key]+"'>"+bank[key]+"</option>");
+					}
+					$('#m_num').val("");
+				}
+			}).change();
+			
+			$("#pay").click(function(){
+				console.log($("#p_method").val());
+				console.log($("#paycom").val());
+				console.log($("#m_num").val());
+				$("#paymentResult").html($("#p_method").val()+"<br>"+$("#paycom").val()+"<br>"+$("#m_num").val());
+			});
+		});
+		function payCheck(f){
+			var payCk = f.payck.value;
+			if(payCk!="yes"){
+				alert("아직 결제 전 입니다.");
+				return;
+			}
+		}
+		</script>
+		<div id="paymentResult"></div>
+	</div>
+</div>
+
+<footer class="ft" style="min-height:100px; border-top:3px solid #333; margin-top:30px; padding-top:30px;">
+  <div class="container-fluid ft_wrap">
+	<p style="font-weight:bold;">Copyright © 2023 PANDAPET. All Rights Reserved.</p>
+  </div>
+</footer>
+</body>
+</html>

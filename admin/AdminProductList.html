@@ -1,0 +1,1024 @@
+
+
+
+
+
+  
+<!DOCTYPE html>
+<html>
+<head>
+
+ 
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- 문서 정보 등록 -->
+<!-- 검색엔진 최적화(Search Engine Optimization) : SEO -->
+<meta name="subject" content="판다샵">
+<meta name="keywords" content="책방, 교과서, 서적, 종류 ,ㅣ 소설, 시">
+<meta name="description" content="교과서, 서적, 소설, 시">
+<meta name="author" content="yuseop2">
+
+<!-- 파비콘(favorite icon) 설정 /제작사이트 / 어플아이콘 --> 
+<link rel="shortcut icon"  href="/pro02/img/favi/favicon.ico">
+
+<!-- 오픈그래프 설정 -->
+<!-- https://yuseop2.githube.is/web1 입력해서 확인 가능 -->
+<meta name="og:site_name" content="사이트이름">
+<meta name="og:title" content="포트폴리오 - CJ프레시웨이">
+<meta name="og:description" content="CJ프레시웨이는 CJ 식품의 전반적인 정보를 공유합니다">
+<meta name="og:url" content="https://yuseop2.githube.is/pro02">
+<meta name="og:image" content="S{common_path}/image/og_screen.jpg">
+
+<!-- 기본 폰트 및 초기화 로딩 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
+<!-- 스타일 초기화 로딩 -->
+<!-- reset.css나 normalize.css를 CDN 또는 다운로드 받아 link로 연결 -->
+<link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" rel="stylesheet">
+
+<!-- jquery 로딩-->
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+<title>상품 목록</title>
+<style>
+.container-fluid { width:1280px; }
+.thumbnail { height:500px; }
+.comment { width:auto; height:60px; overflow: hidden;  text-overflow: ellipsis; 
+ display: -webkit-box;  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical; }
+.thumb_box { width:200px; height:200px; margin:24px auto; margin-bottom:10px; height:auto; overflow:hidden;
+padding-top:5px; padding-bottom:5px; 
+border:1px solid #e0e0f0; text-align:center; }
+.thumb_box::after { content:""; display:block; clear:both; }
+.thumb_box img { width:auto; height:193px;  }  
+</style>
+</head>
+<body>
+<header id="hd" class="container">
+	<div class="container-fluid">
+		<nav id="tnb" class="navbar navbar-default">
+			<ul class="nav navbar-nav navbar-right" style="padding-right:40px">								
+				<li><a href="http://127.0.0.1:5500/user/UserLogin.html">로그인</a></li>
+				<li><a href="http://127.0.0.1:5500/user/UserTerms.html">회원가입</a></li>
+				<li><a href="http://127.0.0.1:5500/user/MyPage.html">마이페이지</a></li>					
+				<li><a href="http://127.0.0.1:5500/user/MyBasket.html">장바구니</a></li>
+				<li><a href="http://127.0.0.1:5500/user/MySalesList.html">구매내역</a></li>
+				<li><a href="http://127.0.0.1:5500/index.html">로그아웃</a></li>													
+			</ul>
+		</nav>
+	</div>
+	<div class="container-fluid" >	
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand"  href="http://127.0.0.1:5500/index.html">MYSHOP</a>
+			</div>		
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">		       		        
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">사료 <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">어덜트</a></li>
+							<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">퍼피</a></li>
+							<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">시니어</a></li>
+							<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">소프트사료</a></li>
+							<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">습식</a></li>
+							<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">샘플</a></li>		           
+						</ul>
+					</li>		          		       
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">간식 <span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">수제간식</a></li>
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">덴탈껌</a></li>
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">뼈간식</a></li>
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">개껌</a></li>
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">영양제</a></li>
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">육포/저키</a></li>
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">캔/파우치</a></li>
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">우유/음료</a></li>		
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">건강관리 <span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">위생용품</a></li>
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">칫솔/치약</a></li>
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">미용/관리</a></li>
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">목용용품</a></li>
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">산책용품</a></li>
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">사료통/급식기</a></li>
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">넥카라/수술</a></li>
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">스텝/매트</a></li>		
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">기타용품 <span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">배변용품</a></li>
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">장난감</a></li>
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">훈련용품</a></li>
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">하우스/방석</a></li>
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">이동장/유모차</a></li>
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">가방/카시트</a></li>
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">의류/악세사리</a></li>
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">파티</a></li>		
+					</ul>
+				</li>	
+				<li class="dropdown">
+						<a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">커뮤니티 <span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="http://127.0.0.1:5500/notice/NoticeList.html">Notice - 공지사항</a></li>
+						<li><a href="http://127.0.0.1:5500/faq/FaqList.html">FAQ - 자주하는 질문</a></li>
+						<li><a href="http://127.0.0.1:5500/qna/QnaList.html">QnA - 묻고 답하기</a></li>			         
+					</ul>
+					</li>	   
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+				<li><a href="http://127.0.0.1:5500/admin/MemberList.html">회원 관리</a></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">상품/판매 관리 <span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">		          
+					<li><a href="http://127.0.0.1:5500/admin/AdminProductList.html">상품 관리</a></li>		          
+					<li><a href="http://127.0.0.1:5500/admin/AdminBasketList.html">장바구니 관리</a></li>
+						<li><a href="http://127.0.0.1:5500/admin/Survey.html">배송 관리</a></li>		        
+					</ul>
+				</li>
+				<li class="dropdown" style="padding-right:30px; margin-right:30px;">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">글 관리 <span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+					<li><a href="http://127.0.0.1:5500/notice/NoticeList.html">Notice - 공지사항 관리</a></li>
+					<li><a href="http://127.0.0.1:5500/faq/FaqList.html">FAQ - 자주하는 질문 관리</a></li>
+					<li><a href="http://127.0.0.1:5500/qna/QnaList.html">QnA - 묻고 답하기 관리</a></li>		            
+					<li><a href="http://127.0.0.1:5500/admin/AdminReviewList.html">Review - 이용후기 관리</a></li>		          
+					</ul>
+				</li>
+				</ul>	
+			</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
+	</div>
+</header>
+<div class="content" style="padding-top:30px; margin-top:30px; border-top:3px solid #333; min-height:500px; ">
+	<div class="container-fluid">
+		<h2>상품 - 전체</h2>
+		<hr>
+		
+			<div class="btn-group">
+				<a href="http://127.0.0.1:5500/admin/AdminProductList.html" role="button" class="btn btn-primary">사료 </a>
+				<a href="http://127.0.0.1:5500/admin/AdminProductList.html" role="button" class="btn btn-primary">간식 </a>
+				<a href="http://127.0.0.1:5500/admin/AdminProductList.html" role="button" class="btn btn-primary">건강관리 </a>
+				<a href="http://127.0.0.1:5500/admin/AdminProductList.html" role="button" class="btn btn-primary">기타용품 </a>			
+				<a href="http://127.0.0.1:5500/admin/AdminProductList.html" role="button" class="btn btn-primary">품절 상품</a>
+			</div>
+			<hr>
+		
+		
+		<article class="row">
+			
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<div class="thumbnail">
+					<div class="thumb_box">
+						<a href="http://127.0.0.1:5500/admin/ProductDetail.html" title="상품 상세 보기">
+						<img src="/pro02/product/img/S-GU001.png" alt="도너츠껌 - 개껌"/>
+						</a>
+					</div>
+					<div class="caption">								
+						<h4><strong>도너츠껌 - 개껌</strong></h4>
+							<p class="comment"><strong>상품 설명</strong> :<br>턱관절 강화와 치석관리</p>
+							<p><strong>용량</strong> : 100g</p>
+							<p><strong>수량</strong> :
+								
+								100
+							</p>
+							<p><strong>가격</strong> : ￦3,000</p>					
+						<div class="btn-group">							
+															
+								<a href="http://127.0.0.1:5500/admin/ReceiptProduct.html" class="btn btn-primary" role="button">상품 입고</a>
+								<a href="http://127.0.0.1:5500/product/UpdateProduct.html" class="btn btn-success" role="button">상품 수정</a>
+								<a href="http://127.0.0.1:5500/index.html" class="btn btn-warning" role="button">상품 삭제</a>
+							
+						</div>		
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<div class="thumbnail">
+					<div class="thumb_box">
+						<a href="http://127.0.0.1:5500/admin/ProductDetail.html" title="상품 상세 보기">
+						<img src="/pro02/product/img/E-PA001.png" alt="생일 파티 세트 - 파티"/>
+						</a>
+					</div>
+					<div class="caption">								
+						<h4><strong>생일 파티 세트 - 파티</strong></h4>
+							<p class="comment"><strong>상품 설명</strong> :<br>우리 아이 생일은 특별하게</p>
+							<p><strong>용량</strong> : 1kg</p>
+							<p><strong>수량</strong> :
+								
+								101
+							</p>
+							<p><strong>가격</strong> : ￦15,000</p>					
+						<div class="btn-group">							
+															
+							<a href="http://127.0.0.1:5500/admin/ReceiptProduct.html" class="btn btn-primary" role="button">상품 입고</a>
+							<a href="http://127.0.0.1:5500/product/UpdateProduct.html" class="btn btn-success" role="button">상품 수정</a>
+							<a href="http://127.0.0.1:5500/index.html" class="btn btn-warning" role="button">상품 삭제</a>
+						</div>		
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<div class="thumbnail">
+					<div class="thumb_box">
+						<a href="http://127.0.0.1:5500/admin/ProductDetail.html" title="상품 상세 보기">
+						<img src="/pro02/product/img/E-DR001.png" alt="레인코트 - 의류/악세사리"/>
+						</a>
+					</div>
+					<div class="caption">								
+						<h4><strong>레인코트 - 의류/악세사리</strong></h4>
+							<p class="comment"><strong>상품 설명</strong> :<br>비가 와도 날씨 상관없도록</p>
+							<p><strong>용량</strong> : 50g</p>
+							<p><strong>수량</strong> :
+								
+								100
+							</p>
+							<p><strong>가격</strong> : ￦20,000</p>					
+						<div class="btn-group">
+							
+							<a href="http://127.0.0.1:5500/admin/ReceiptProduct.html" class="btn btn-primary" role="button">상품 입고</a>
+							<a href="http://127.0.0.1:5500/product/UpdateProduct.html" class="btn btn-success" role="button">상품 수정</a>
+							<a href="http://127.0.0.1:5500/index.html" class="btn btn-warning" role="button">상품 삭제</a>
+						</div>		
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<div class="thumbnail">
+					<div class="thumb_box">
+						<a href="http://127.0.0.1:5500/admin/ProductDetail.html" title="상품 상세 보기">
+						<img src="/pro02/product/img/E-BA001.png" alt="우주선 백팩 - 가방/카시트"/>
+						</a>
+					</div>
+					<div class="caption">								
+						<h4><strong>우주선 백팩 - 가방/카시트</strong></h4>
+							<p class="comment"><strong>상품 설명</strong> :<br>사람과 반려동물 모두 편안한 안정감</p>
+							<p><strong>용량</strong> : 1kg</p>
+							<p><strong>수량</strong> :
+								
+								100
+							</p>
+							<p><strong>가격</strong> : ￦45,000</p>					
+						<div class="btn-group">
+							
+							<a href="http://127.0.0.1:5500/admin/ReceiptProduct.html" class="btn btn-primary" role="button">상품 입고</a>
+							<a href="http://127.0.0.1:5500/product/UpdateProduct.html" class="btn btn-success" role="button">상품 수정</a>
+							<a href="http://127.0.0.1:5500/index.html" class="btn btn-warning" role="button">상품 삭제</a>
+						</div>		
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<div class="thumbnail">
+					<div class="thumb_box">
+						<a href="http://127.0.0.1:5500/admin/ProductDetail.html" title="상품 상세 보기">
+						<img src="/pro02/product/img/E-MO001.png" alt="캐리어 백팩 - 이동장/유모차"/>
+						</a>
+					</div>
+					<div class="caption">								
+						<h4><strong>캐리어 백팩 - 이동장/유모차</strong></h4>
+							<p class="comment"><strong>상품 설명</strong> :<br>4개 바퀴 모두 360도 회전</p>
+							<p><strong>용량</strong> : 3kg</p>
+							<p><strong>수량</strong> :
+								
+								100
+							</p>
+							<p><strong>가격</strong> : ￦60,000</p>					
+						<div class="btn-group">
+							<a href="http://127.0.0.1:5500/admin/ReceiptProduct.html" class="btn btn-primary" role="button">상품 입고</a>
+							<a href="http://127.0.0.1:5500/product/UpdateProduct.html" class="btn btn-success" role="button">상품 수정</a>
+							<a href="http://127.0.0.1:5500/index.html" class="btn btn-warning" role="button">상품 삭제</a>
+						</div>		
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<div class="thumbnail">
+					<div class="thumb_box">
+						<a href="http://127.0.0.1:5500/admin/ProductDetail.html" title="상품 상세 보기">
+						<img src="/pro02/product/img/E-HO001.png" alt="마약방석 - 하우스/방석"/>
+						</a>
+					</div>
+					<div class="caption">								
+						<h4><strong>마약방석 - 하우스/방석</strong></h4>
+							<p class="comment"><strong>상품 설명</strong> :<br>안락하고 푹신하게 머무를 수 있도록</p>
+							<p><strong>용량</strong> : 3kg</p>
+							<p><strong>수량</strong> :
+								
+								100
+							</p>
+							<p><strong>가격</strong> : ￦50,000</p>					
+						<div class="btn-group">
+							
+							<a href="http://127.0.0.1:5500/admin/ReceiptProduct.html" class="btn btn-primary" role="button">상품 입고</a>
+							<a href="http://127.0.0.1:5500/product/UpdateProduct.html" class="btn btn-success" role="button">상품 수정</a>
+							<a href="http://127.0.0.1:5500/index.html" class="btn btn-warning" role="button">상품 삭제</a>
+						</div>		
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<div class="thumbnail">
+					<div class="thumb_box">
+						<a href="http://127.0.0.1:5500/admin/ProductDetail.html" title="상품 상세 보기">
+						<img src="/pro02/product/img/E-TR001.png" alt="트릿트릭 리필 - 훈련용품"/>
+						</a>
+					</div>
+					<div class="caption">								
+						<h4><strong>트릿트릭 리필 - 훈련용품</strong></h4>
+							<p class="comment"><strong>상품 설명</strong> :<br>훈련용 보상 간식</p>
+							<p><strong>용량</strong> : 180g</p>
+							<p><strong>수량</strong> :
+								
+								100
+							</p>
+							<p><strong>가격</strong> : ￦10,000</p>					
+						<div class="btn-group">
+							
+							<a href="http://127.0.0.1:5500/admin/ReceiptProduct.html" class="btn btn-primary" role="button">상품 입고</a>
+							<a href="http://127.0.0.1:5500/product/UpdateProduct.html" class="btn btn-success" role="button">상품 수정</a>
+							<a href="http://127.0.0.1:5500/index.html" class="btn btn-warning" role="button">상품 삭제</a>
+						</div>		
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<div class="thumbnail">
+					<div class="thumb_box">
+						<a href="http://127.0.0.1:5500/admin/ProductDetail.html" title="상품 상세 보기">
+						<img src="/pro02/product/img/E-TO001.png" alt="컬러 로프볼 - 장난감"/>
+						</a>
+					</div>
+					<div class="caption">								
+						<h4><strong>컬러 로프볼 - 장난감</strong></h4>
+							<p class="comment"><strong>상품 설명</strong> :<br>취향에 맞는 컬러 로프 공</p>
+							<p><strong>용량</strong> : 52g</p>
+							<p><strong>수량</strong> :
+								
+								100
+							</p>
+							<p><strong>가격</strong> : ￦1,500</p>					
+						<div class="btn-group">
+							
+							<a href="http://127.0.0.1:5500/admin/ReceiptProduct.html" class="btn btn-primary" role="button">상품 입고</a>
+							<a href="http://127.0.0.1:5500/product/UpdateProduct.html" class="btn btn-success" role="button">상품 수정</a>
+							<a href="http://127.0.0.1:5500/index.html" class="btn btn-warning" role="button">상품 삭제</a>
+						</div>		
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<div class="thumbnail">
+					<div class="thumb_box">
+						<a href="http://127.0.0.1:5500/admin/ProductDetail.html" title="상품 상세 보기">
+						<img src="/pro02/product/img/E-PU001.png" alt="호랑이 패드 - 배변용품"/>
+						</a>
+					</div>
+					<div class="caption">								
+						<h4><strong>호랑이 패드 - 배변용품</strong></h4>
+							<p class="comment"><strong>상품 설명</strong> :<br>강력한 6단 특수 구조설계한 패드</p>
+							<p><strong>용량</strong> : 1kg</p>
+							<p><strong>수량</strong> :
+								
+								100
+							</p>
+							<p><strong>가격</strong> : ￦20,000</p>					
+						<div class="btn-group">
+							
+							<a href="http://127.0.0.1:5500/admin/ReceiptProduct.html" class="btn btn-primary" role="button">상품 입고</a>
+							<a href="http://127.0.0.1:5500/product/UpdateProduct.html" class="btn btn-success" role="button">상품 수정</a>
+							<a href="http://127.0.0.1:5500/index.html" class="btn btn-warning" role="button">상품 삭제</a>
+						</div>		
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<div class="thumbnail">
+					<div class="thumb_box">
+						<a href="http://127.0.0.1:5500/admin/ProductDetail.html" title="상품 상세 보기">
+						<img src="/pro02/product/img/H-MT001.png" alt="논슬립 스텝 - 스텝/매트"/>
+						</a>
+					</div>
+					<div class="caption">								
+						<h4><strong>논슬립 스텝 - 스텝/매트</strong></h4>
+							<p class="comment"><strong>상품 설명</strong> :<br>슬개골 탈구와 골절을 예방하는</p>
+							<p><strong>용량</strong> : 2kg</p>
+							<p><strong>수량</strong> :
+								
+								100
+							</p>
+							<p><strong>가격</strong> : ￦60,000</p>					
+						<div class="btn-group">
+							
+							<a href="http://127.0.0.1:5500/admin/ReceiptProduct.html" class="btn btn-primary" role="button">상품 입고</a>
+							<a href="http://127.0.0.1:5500/product/UpdateProduct.html" class="btn btn-success" role="button">상품 수정</a>
+							<a href="http://127.0.0.1:5500/index.html" class="btn btn-warning" role="button">상품 삭제</a>
+						</div>		
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<div class="thumbnail">
+					<div class="thumb_box">
+						<a href="http://127.0.0.1:5500/admin/ProductDetail.html" title="상품 상세 보기">
+						<img src="/pro02/product/img/H-KK001.png" alt="목화솜 넥카라 L - 넥카라/수술"/>
+						</a>
+					</div>
+					<div class="caption">								
+						<h4><strong>목화솜 넥카라 L - 넥카라/수술</strong></h4>
+							<p class="comment"><strong>상품 설명</strong> :<br>가볍고 편안한 넥카라</p>
+							<p><strong>용량</strong> : 140g</p>
+							<p><strong>수량</strong> :
+								
+								100
+							</p>
+							<p><strong>가격</strong> : ￦15,000</p>					
+						<div class="btn-group">
+							
+							<a href="http://127.0.0.1:5500/admin/ReceiptProduct.html" class="btn btn-primary" role="button">상품 입고</a>
+							<a href="http://127.0.0.1:5500/product/UpdateProduct.html" class="btn btn-success" role="button">상품 수정</a>
+							<a href="http://127.0.0.1:5500/index.html" class="btn btn-warning" role="button">상품 삭제</a>
+						</div>		
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<div class="thumbnail">
+					<div class="thumb_box">
+						<a href="http://127.0.0.1:5500/admin/ProductDetail.html" title="상품 상세 보기">
+						<img src="/pro02/product/img/H-FD001.png" alt="사료밀폐용기 - 사료통/급식기"/>
+						</a>
+					</div>
+					<div class="caption">								
+						<h4><strong>사료밀폐용기 - 사료통/급식기</strong></h4>
+							<p class="comment"><strong>상품 설명</strong> :<br>언제나 막 개봉한 듯 맛있는 사료</p>
+							<p><strong>용량</strong> : 2kg</p>
+							<p><strong>수량</strong> :
+								
+								100
+							</p>
+							<p><strong>가격</strong> : ￦9,000</p>					
+						<div class="btn-group">
+							
+							<a href="http://127.0.0.1:5500/admin/ReceiptProduct.html" class="btn btn-primary" role="button">상품 입고</a>
+							<a href="http://127.0.0.1:5500/product/UpdateProduct.html" class="btn btn-success" role="button">상품 수정</a>
+							<a href="http://127.0.0.1:5500/index.html" class="btn btn-warning" role="button">상품 삭제</a>
+						</div>		
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<div class="thumbnail">
+					<div class="thumb_box">
+						<a href="http://127.0.0.1:5500/admin/ProductDetail.html" title="상품 상세 보기">
+						<img src="/pro02/product/img/H-WA001.png" alt="에코펫위드 물병 - 산책용품"/>
+						</a>
+					</div>
+					<div class="caption">								
+						<h4><strong>에코펫위드 물병 - 산책용품</strong></h4>
+							<p class="comment"><strong>상품 설명</strong> :<br>버튼을 누르면 물이 쪼르르르</p>
+							<p><strong>용량</strong> : 330g</p>
+							<p><strong>수량</strong> :
+								
+								100
+							</p>
+							<p><strong>가격</strong> : ￦9,000</p>					
+						<div class="btn-group">
+							
+							<a href="http://127.0.0.1:5500/admin/ReceiptProduct.html" class="btn btn-primary" role="button">상품 입고</a>
+							<a href="http://127.0.0.1:5500/product/UpdateProduct.html" class="btn btn-success" role="button">상품 수정</a>
+							<a href="http://127.0.0.1:5500/index.html" class="btn btn-warning" role="button">상품 삭제</a>
+						</div>		
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<div class="thumbnail">
+					<div class="thumb_box">
+						<a href="http://127.0.0.1:5500/admin/ProductDetail.html" title="상품 상세 보기">
+						<img src="/pro02/product/img/H-SH001.png" alt="쿤달 컨디셔닝 샴푸 - 목욕용품"/>
+						</a>
+					</div>
+					<div class="caption">								
+						<h4><strong>쿤달 컨디셔닝 샴푸 - 목욕용품</strong></h4>
+							<p class="comment"><strong>상품 설명</strong> :<br>린스 없이도 압도적인 부드러움</p>
+							<p><strong>용량</strong> : 500g</p>
+							<p><strong>수량</strong> :
+								
+								99
+							</p>
+							<p><strong>가격</strong> : ￦15,000</p>					
+						<div class="btn-group">
+							
+							<a href="http://127.0.0.1:5500/admin/ReceiptProduct.html" class="btn btn-primary" role="button">상품 입고</a>
+							<a href="http://127.0.0.1:5500/product/UpdateProduct.html" class="btn btn-success" role="button">상품 수정</a>
+							<a href="http://127.0.0.1:5500/index.html" class="btn btn-warning" role="button">상품 삭제</a>
+						</div>		
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<div class="thumbnail">
+					<div class="thumb_box">
+						<a href="http://127.0.0.1:5500/admin/ProductDetail.html" title="상품 상세 보기">
+						<img src="/pro02/product/img/H-SL001.png" alt="메디멀크림 - 미용/관리"/>
+						</a>
+					</div>
+					<div class="caption">								
+						<h4><strong>메디멀크림 - 미용/관리</strong></h4>
+							<p class="comment"><strong>상품 설명</strong> :<br>피부 고민 완벽 솔루션</p>
+							<p><strong>용량</strong> : 20g</p>
+							<p><strong>수량</strong> :
+								
+								100
+							</p>
+							<p><strong>가격</strong> : ￦6,000</p>					
+						<div class="btn-group">
+							
+							<a href="http://127.0.0.1:5500/admin/ReceiptProduct.html" class="btn btn-primary" role="button">상품 입고</a>
+							<a href="http://127.0.0.1:5500/product/UpdateProduct.html" class="btn btn-success" role="button">상품 수정</a>
+							<a href="http://127.0.0.1:5500/index.html" class="btn btn-warning" role="button">상품 삭제</a>
+						</div>		
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<div class="thumbnail">
+					<div class="thumb_box">
+						<a href="http://127.0.0.1:5500/admin/ProductDetail.html" title="상품 상세 보기">
+						<img src="/pro02/product/img/H-DT001.png" alt="버박 닭고기맛 - 치약"/>
+						</a>
+					</div>
+					<div class="caption">								
+						<h4><strong>버박 닭고기맛 - 치약</strong></h4>
+							<p class="comment"><strong>상품 설명</strong> :<br>수의사가 만든 맛있는 치약</p>
+							<p><strong>용량</strong> : 70g</p>
+							<p><strong>수량</strong> :
+								
+								100
+							</p>
+							<p><strong>가격</strong> : ￦15,000</p>					
+						<div class="btn-group">
+							
+							<a href="http://127.0.0.1:5500/admin/ReceiptProduct.html" class="btn btn-primary" role="button">상품 입고</a>
+							<a href="http://127.0.0.1:5500/product/UpdateProduct.html" class="btn btn-success" role="button">상품 수정</a>
+							<a href="http://127.0.0.1:5500/index.html" class="btn btn-warning" role="button">상품 삭제</a>
+						</div>		
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<div class="thumbnail">
+					<div class="thumb_box">
+						<a href="http://127.0.0.1:5500/admin/ProductDetail.html" title="상품 상세 보기">
+						<img src="/pro02/product/img/H-CL001.png" alt="오롯이 천연탈취제 - 위생용품"/>
+						</a>
+					</div>
+					<div class="caption">								
+						<h4><strong>오롯이 천연탈취제 - 위생용품</strong></h4>
+							<p class="comment"><strong>상품 설명</strong> :<br>살균과 탈취를 한번에</p>
+							<p><strong>용량</strong> : 650g</p>
+							<p><strong>수량</strong> :
+								
+								99
+							</p>
+							<p><strong>가격</strong> : ￦12,000</p>					
+						<div class="btn-group">
+							
+							<a href="http://127.0.0.1:5500/admin/ReceiptProduct.html" class="btn btn-primary" role="button">상품 입고</a>
+							<a href="http://127.0.0.1:5500/product/UpdateProduct.html" class="btn btn-success" role="button">상품 수정</a>
+							<a href="http://127.0.0.1:5500/index.html" class="btn btn-warning" role="button">상품 삭제</a>
+						</div>		
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<div class="thumbnail">
+					<div class="thumb_box">
+						<a href="http://127.0.0.1:5500/admin/ProductDetail.html" title="상품 상세 보기">
+						<img src="/pro02/product/img/03010002.png" alt="버박 귀세정제 - 위생"/>
+						</a>
+					</div>
+					<div class="caption">								
+						<h4><strong>버박 귀세정제 - 위생</strong></h4>
+							<p class="comment"><strong>상품 설명</strong> :<br>귀를 깨끗하게</p>
+							<p><strong>용량</strong> : 120g</p>
+							<p><strong>수량</strong> :
+								
+								1
+							</p>
+							<p><strong>가격</strong> : ￦15,000</p>					
+						<div class="btn-group">
+							
+							<a href="http://127.0.0.1:5500/admin/ReceiptProduct.html" class="btn btn-primary" role="button">상품 입고</a>
+							<a href="http://127.0.0.1:5500/product/UpdateProduct.html" class="btn btn-success" role="button">상품 수정</a>
+							<a href="http://127.0.0.1:5500/index.html" class="btn btn-warning" role="button">상품 삭제</a>
+						</div>		
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<div class="thumbnail">
+					<div class="thumb_box">
+						<a href="http://127.0.0.1:5500/admin/ProductDetail.html" title="상품 상세 보기">
+						<img src="/pro02/product/img/S-MK001.png" alt="펫밀크 - 우유"/>
+						</a>
+					</div>
+					<div class="caption">								
+						<h4><strong>펫밀크 - 우유</strong></h4>
+							<p class="comment"><strong>상품 설명</strong> :<br>눈과 관절이 튼튼해지는 고소한 우유</p>
+							<p><strong>용량</strong> : 150g</p>
+							<p><strong>수량</strong> :
+								
+								100
+							</p>
+							<p><strong>가격</strong> : ￦2,000</p>					
+						<div class="btn-group">
+							<a href="http://127.0.0.1:5500/admin/ReceiptProduct.html" class="btn btn-primary" role="button">상품 입고</a>
+							<a href="http://127.0.0.1:5500/product/UpdateProduct.html" class="btn btn-success" role="button">상품 수정</a>
+							<a href="http://127.0.0.1:5500/index.html" class="btn btn-warning" role="button">상품 삭제</a>
+						</div>		
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<div class="thumbnail">
+					<div class="thumb_box">
+						<a href="http://127.0.0.1:5500/admin/ProductDetail.html" title="상품 상세 보기">
+						<img src="/pro02/product/img/S-CP001.png" alt="시저간식 - 캔"/>
+						</a>
+					</div>
+					<div class="caption">								
+						<h4><strong>시저간식 - 캔</strong></h4>
+							<p class="comment"><strong>상품 설명</strong> :<br>어디서나 간편한 즐거움</p>
+							<p><strong>용량</strong> : 100g</p>
+							<p><strong>수량</strong> :
+								
+								100
+							</p>
+							<p><strong>가격</strong> : ￦2,000</p>					
+						<div class="btn-group">
+							
+							<a href="http://127.0.0.1:5500/admin/ReceiptProduct.html" class="btn btn-primary" role="button">상품 입고</a>
+							<a href="http://127.0.0.1:5500/product/UpdateProduct.html" class="btn btn-success" role="button">상품 수정</a>
+							<a href="http://127.0.0.1:5500/index.html" class="btn btn-warning" role="button">상품 삭제</a>
+						</div>		
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<div class="thumbnail">
+					<div class="thumb_box">
+						<a href="http://127.0.0.1:5500/admin/ProductDetail.html" title="상품 상세 보기">
+						<img src="/pro02/product/img/S-JK001.png" alt="진짜육포 소고기 - 저키"/>
+						</a>
+					</div>
+					<div class="caption">								
+						<h4><strong>진짜육포 소고기 - 저키</strong></h4>
+							<p class="comment"><strong>상품 설명</strong> :<br>진짜 생고기로 만든 건강한 육포</p>
+							<p><strong>용량</strong> : 180g</p>
+							<p><strong>수량</strong> :
+								
+								100
+							</p>
+							<p><strong>가격</strong> : ￦6,000</p>					
+						<div class="btn-group">
+							
+							<a href="http://127.0.0.1:5500/admin/ReceiptProduct.html" class="btn btn-primary" role="button">상품 입고</a>
+							<a href="http://127.0.0.1:5500/product/UpdateProduct.html" class="btn btn-success" role="button">상품 수정</a>
+							<a href="http://127.0.0.1:5500/index.html" class="btn btn-warning" role="button">상품 삭제</a>
+						</div>		
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<div class="thumbnail">
+					<div class="thumb_box">
+						<a href="http://127.0.0.1:5500/admin/ProductDetail.html" title="상품 상세 보기">
+						<img src="/pro02/product/img/S-VI001.png" alt="멍산균 - 영양제"/>
+						</a>
+					</div>
+					<div class="caption">								
+						<h4><strong>멍산균 - 영양제</strong></h4>
+							<p class="comment"><strong>상품 설명</strong> :<br>면역력 증진을 위한 장 건강 관리</p>
+							<p><strong>용량</strong> : 60g</p>
+							<p><strong>수량</strong> :
+								
+								100
+							</p>
+							<p><strong>가격</strong> : ￦30,000</p>					
+						<div class="btn-group">
+							
+							<a href="http://127.0.0.1:5500/admin/ReceiptProduct.html" class="btn btn-primary" role="button">상품 입고</a>
+							<a href="http://127.0.0.1:5500/product/UpdateProduct.html" class="btn btn-success" role="button">상품 수정</a>
+							<a href="http://127.0.0.1:5500/index.html" class="btn btn-warning" role="button">상품 삭제</a>
+						</div>		
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<div class="thumbnail">
+					<div class="thumb_box">
+						<a href="http://127.0.0.1:5500/admin/ProductDetail.html" title="상품 상세 보기">
+						<img src="/pro02/product/img/S-BO001.png" alt="오리목뼈 - 뼈간식"/>
+						</a>
+					</div>
+					<div class="caption">								
+						<h4><strong>오리목뼈 - 뼈간식</strong></h4>
+							<p class="comment"><strong>상품 설명</strong> :<br>치석예방과 스트레스 해소</p>
+							<p><strong>용량</strong> : 100g</p>
+							<p><strong>수량</strong> :
+								
+								100
+							</p>
+							<p><strong>가격</strong> : ￦5,000</p>					
+						<div class="btn-group">
+							
+							<a href="http://127.0.0.1:5500/admin/ReceiptProduct.html" class="btn btn-primary" role="button">상품 입고</a>
+							<a href="http://127.0.0.1:5500/product/UpdateProduct.html" class="btn btn-success" role="button">상품 수정</a>
+							<a href="http://127.0.0.1:5500/index.html" class="btn btn-warning" role="button">상품 삭제</a>
+						</div>		
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<div class="thumbnail">
+					<div class="thumb_box">
+						<a href="http://127.0.0.1:5500/admin/ProductDetail.html" title="상품 상세 보기">
+						<img src="/pro02/product/img/S-DT001.png" alt="그리니즈 - 덴탈껌"/>
+						</a>
+					</div>
+					<div class="caption">								
+						<h4><strong>그리니즈 - 덴탈껌</strong></h4>
+							<p class="comment"><strong>상품 설명</strong> :<br>치아관리에 도움을 주는 간식껌</p>
+							<p><strong>용량</strong> : 700g</p>
+							<p><strong>수량</strong> :
+								
+								100
+							</p>
+							<p><strong>가격</strong> : ￦50,000</p>					
+						<div class="btn-group">
+							
+							<a href="http://127.0.0.1:5500/admin/ReceiptProduct.html" class="btn btn-primary" role="button">상품 입고</a>
+							<a href="http://127.0.0.1:5500/product/UpdateProduct.html" class="btn btn-success" role="button">상품 수정</a>
+							<a href="http://127.0.0.1:5500/index.html" class="btn btn-warning" role="button">상품 삭제</a>
+						</div>		
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<div class="thumbnail">
+					<div class="thumb_box">
+						<a href="http://127.0.0.1:5500/admin/ProductDetail.html" title="상품 상세 보기">
+						<img src="/pro02/product/img/S-HM001.png" alt="양고기 케이크 - 수제간식"/>
+						</a>
+					</div>
+					<div class="caption">								
+						<h4><strong>양고기 케이크 - 수제간식</strong></h4>
+							<p class="comment"><strong>상품 설명</strong> :<br>직접 만든 생일 축하 케이크</p>
+							<p><strong>용량</strong> : 100g</p>
+							<p><strong>수량</strong> :
+								
+								100
+							</p>
+							<p><strong>가격</strong> : ￦30,000</p>					
+						<div class="btn-group">
+							
+							<a href="http://127.0.0.1:5500/admin/ReceiptProduct.html" class="btn btn-primary" role="button">상품 입고</a>
+							<a href="http://127.0.0.1:5500/product/UpdateProduct.html" class="btn btn-success" role="button">상품 수정</a>
+							<a href="http://127.0.0.1:5500/index.html" class="btn btn-warning" role="button">상품 삭제</a>
+						</div>		
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<div class="thumbnail">
+					<div class="thumb_box">
+						<a href="http://127.0.0.1:5500/admin/ProductDetail.html" title="상품 상세 보기">
+						<img src="/pro02/product/img/F-SA001.png" alt="닥터독 - 샘플"/>
+						</a>
+					</div>
+					<div class="caption">								
+						<h4><strong>닥터독 - 샘플</strong></h4>
+							<p class="comment"><strong>상품 설명</strong> :<br>기호성 확인을 위한 샘플 사료</p>
+							<p><strong>용량</strong> : 250g</p>
+							<p><strong>수량</strong> :
+								
+								100
+							</p>
+							<p><strong>가격</strong> : ￦5,000</p>					
+						<div class="btn-group">
+							
+							<a href="http://127.0.0.1:5500/admin/ReceiptProduct.html" class="btn btn-primary" role="button">상품 입고</a>
+							<a href="http://127.0.0.1:5500/product/UpdateProduct.html" class="btn btn-success" role="button">상품 수정</a>
+							<a href="http://127.0.0.1:5500/index.html" class="btn btn-warning" role="button">상품 삭제</a>
+						</div>		
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<div class="thumbnail">
+					<div class="thumb_box">
+						<a href="http://127.0.0.1:5500/admin/ProductDetail.html" title="상품 상세 보기">
+						<img src="/pro02/product/img/F-WE001.png" alt="나우 - 습식"/>
+						</a>
+					</div>
+					<div class="caption">								
+						<h4><strong>나우 - 습식</strong></h4>
+							<p class="comment"><strong>상품 설명</strong> :<br>식욕 증진과 수분 공급이 좋은 사료</p>
+							<p><strong>용량</strong> : 300g</p>
+							<p><strong>수량</strong> :
+								
+								99
+							</p>
+							<p><strong>가격</strong> : ￦10,000</p>					
+						<div class="btn-group">
+							
+							<a href="http://127.0.0.1:5500/admin/ReceiptProduct.html" class="btn btn-primary" role="button">상품 입고</a>
+							<a href="http://127.0.0.1:5500/product/UpdateProduct.html" class="btn btn-success" role="button">상품 수정</a>
+							<a href="http://127.0.0.1:5500/index.html" class="btn btn-warning" role="button">상품 삭제</a>
+						</div>		
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<div class="thumbnail">
+					<div class="thumb_box">
+						<a href="http://127.0.0.1:5500/admin/ProductDetail.html" title="상품 상세 보기">
+						<img src="/pro02/product/img/F-SO001.png" alt="더텐 - 소프트"/>
+						</a>
+					</div>
+					<div class="caption">								
+						<h4><strong>더텐 - 소프트</strong></h4>
+							<p class="comment"><strong>상품 설명</strong> :<br>먹기 편한 부드러운 사료</p>
+							<p><strong>용량</strong> : 3kg</p>
+							<p><strong>수량</strong> :
+								
+								100
+							</p>
+							<p><strong>가격</strong> : ￦50,000</p>					
+						<div class="btn-group">
+							
+							<a href="http://127.0.0.1:5500/admin/ReceiptProduct.html" class="btn btn-primary" role="button">상품 입고</a>
+							<a href="http://127.0.0.1:5500/product/UpdateProduct.html" class="btn btn-success" role="button">상품 수정</a>
+							<a href="http://127.0.0.1:5500/index.html" class="btn btn-warning" role="button">상품 삭제</a>
+						</div>		
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<div class="thumbnail">
+					<div class="thumb_box">
+						<a href="http://127.0.0.1:5500/admin/ProductDetail.html" title="상품 상세 보기">
+						<img src="/pro02/product/img/F-SE001.png" alt="로얄캐닌 - 시니어"/>
+						</a>
+					</div>
+					<div class="caption">								
+						<h4><strong>로얄캐닌 - 시니어</strong></h4>
+							<p class="comment"><strong>상품 설명</strong> :<br>건강한 노화관리를 위한 맞춤사료</p>
+							<p><strong>용량</strong> : 3kg</p>
+							<p><strong>수량</strong> :
+								
+								100
+							</p>
+							<p><strong>가격</strong> : ￦40,000</p>					
+						<div class="btn-group">
+							
+							<a href="http://127.0.0.1:5500/admin/ReceiptProduct.html" class="btn btn-primary" role="button">상품 입고</a>
+							<a href="http://127.0.0.1:5500/product/UpdateProduct.html" class="btn btn-success" role="button">상품 수정</a>
+							<a href="http://127.0.0.1:5500/index.html" class="btn btn-warning" role="button">상품 삭제</a>
+						</div>		
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<div class="thumbnail">
+					<div class="thumb_box">
+						<a href="http://127.0.0.1:5500/admin/ProductDetail.html" title="상품 상세 보기">
+						<img src="/pro02/product/img/F-PU001.png" alt="로얄캐닌 - 퍼피"/>
+						</a>
+					</div>
+					<div class="caption">								
+						<h4><strong>로얄캐닌 - 퍼피</strong></h4>
+							<p class="comment"><strong>상품 설명</strong> :<br>성장기 강아지를 위한 맞춤사료</p>
+							<p><strong>용량</strong> : 3kg</p>
+							<p><strong>수량</strong> :
+								
+								100
+							</p>
+							<p><strong>가격</strong> : ￦40,000</p>					
+						<div class="btn-group">
+							
+							<a href="http://127.0.0.1:5500/admin/ReceiptProduct.html" class="btn btn-primary" role="button">상품 입고</a>
+							<a href="http://127.0.0.1:5500/product/UpdateProduct.html" class="btn btn-success" role="button">상품 수정</a>
+							<a href="http://127.0.0.1:5500/index.html" class="btn btn-warning" role="button">상품 삭제</a>
+						</div>		
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<div class="thumbnail">
+					<div class="thumb_box">
+						<a href="http://127.0.0.1:5500/admin/ProductDetail.html" title="상품 상세 보기">
+						<img src="/pro02/product/img/F-AD001.png" alt="로얄캐닌 - 어덜트"/>
+						</a>
+					</div>
+					<div class="caption">								
+						<h4><strong>로얄캐닌 - 어덜트</strong></h4>
+							<p class="comment"><strong>상품 설명</strong> :<br>성견을 위한 맞춤사료</p>
+							<p><strong>용량</strong> : 3kg</p>
+							<p><strong>수량</strong> :
+								
+								100
+							</p>
+							<p><strong>가격</strong> : ￦40,000</p>					
+						<div class="btn-group">
+							
+							<a href="http://127.0.0.1:5500/admin/ReceiptProduct.html" class="btn btn-primary" role="button">상품 입고</a>
+							<a href="http://127.0.0.1:5500/product/UpdateProduct.html" class="btn btn-success" role="button">상품 수정</a>
+							<a href="http://127.0.0.1:5500/index.html" class="btn btn-warning" role="button">상품 삭제</a>
+						</div>		
+					</div>
+				</div>
+			</div>
+			
+		</article>
+			
+		
+		<div class="btn-group">
+			<a href="http://127.0.0.1:5500/product/InsertProduct.html" class="btn btn-primary">상품 등록</a>
+		</div>
+		
+	</div>
+</div>
+
+<footer class="ft" style="min-height:100px; border-top:3px solid #333; margin-top:30px; padding-top:30px;">
+  <div class="container-fluid ft_wrap">
+	<p style="font-weight:bold;">Copyright © 2023 PANDAPET. All Rights Reserved.</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,211 @@
+
+
+
+
+
+  
+<!DOCTYPE html>
+<html>
+<head>
+
+ 
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- 문서 정보 등록 -->
+<!-- 검색엔진 최적화(Search Engine Optimization) : SEO -->
+<meta name="subject" content="판다샵">
+<meta name="keywords" content="책방, 교과서, 서적, 종류 ,ㅣ 소설, 시">
+<meta name="description" content="교과서, 서적, 소설, 시">
+<meta name="author" content="yuseop2">
+
+<!-- 파비콘(favorite icon) 설정 /제작사이트 / 어플아이콘 --> 
+<link rel="shortcut icon"  href="/pro02/img/favi/favicon.ico">
+
+<!-- 오픈그래프 설정 -->
+<!-- https://yuseop2.githube.is/web1 입력해서 확인 가능 -->
+<meta name="og:site_name" content="사이트이름">
+<meta name="og:title" content="포트폴리오 - CJ프레시웨이">
+<meta name="og:description" content="CJ프레시웨이는 CJ 식품의 전반적인 정보를 공유합니다">
+<meta name="og:url" content="https://yuseop2.githube.is/pro02">
+<meta name="og:image" content="S{common_path}/image/og_screen.jpg">
+
+<!-- 기본 폰트 및 초기화 로딩 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
+<!-- 스타일 초기화 로딩 -->
+<!-- reset.css나 normalize.css를 CDN 또는 다운로드 받아 link로 연결 -->
+<link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" rel="stylesheet">
+
+<!-- jquery 로딩-->
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+<title>질문 및 답변 목록</title>
+<style>
+.container-fluid { width:1280px; }
+</style>
+</head>
+<body>
+<header id="hd" class="container">
+	<div class="container-fluid">
+		<nav id="tnb" class="navbar navbar-default">
+			<ul class="nav navbar-nav navbar-right" style="padding-right:40px">								
+				<li><a href="http://127.0.0.1:5500/user/UserLogin.html">로그인</a></li>
+				<li><a href="http://127.0.0.1:5500/user/UserTerms.html">회원가입</a></li>
+				<li><a href="http://127.0.0.1:5500/user/MyPage.html">마이페이지</a></li>					
+				<li><a href="http://127.0.0.1:5500/user/MyBasket.html">장바구니</a></li>
+				<li><a href="http://127.0.0.1:5500/user/MySalesList.html">구매내역</a></li>
+				<li><a href="http://127.0.0.1:5500/index.html">로그아웃</a></li>													
+			</ul>
+		</nav>
+	</div>
+	<div class="container-fluid" >	
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand"  href="http://127.0.0.1:5500/index.html">MYSHOP</a>
+			</div>		
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">		       		        
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">사료 <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">어덜트</a></li>
+							<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">퍼피</a></li>
+							<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">시니어</a></li>
+							<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">소프트사료</a></li>
+							<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">습식</a></li>
+							<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">샘플</a></li>		           
+						</ul>
+					</li>		          		       
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">간식 <span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">수제간식</a></li>
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">덴탈껌</a></li>
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">뼈간식</a></li>
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">개껌</a></li>
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">영양제</a></li>
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">육포/저키</a></li>
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">캔/파우치</a></li>
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">우유/음료</a></li>		
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">건강관리 <span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">위생용품</a></li>
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">칫솔/치약</a></li>
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">미용/관리</a></li>
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">목용용품</a></li>
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">산책용품</a></li>
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">사료통/급식기</a></li>
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">넥카라/수술</a></li>
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">스텝/매트</a></li>		
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">기타용품 <span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">배변용품</a></li>
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">장난감</a></li>
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">훈련용품</a></li>
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">하우스/방석</a></li>
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">이동장/유모차</a></li>
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">가방/카시트</a></li>
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">의류/악세사리</a></li>
+						<li><a href="http://127.0.0.1:5500/product/ProductList_1.html">파티</a></li>		
+					</ul>
+				</li>	
+				<li class="dropdown">
+						<a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">커뮤니티 <span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="http://127.0.0.1:5500/notice/NoticeList.html">Notice - 공지사항</a></li>
+						<li><a href="http://127.0.0.1:5500/faq/FaqList.html">FAQ - 자주하는 질문</a></li>
+						<li><a href="http://127.0.0.1:5500/qna/QnaList.html">QnA - 묻고 답하기</a></li>			         
+					</ul>
+					</li>	   
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+				<li><a href="http://127.0.0.1:5500/admin/MemberList.html">회원 관리</a></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">상품/판매 관리 <span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">		          
+					<li><a href="http://127.0.0.1:5500/admin/AdminProductList.html">상품 관리</a></li>		          
+					<li><a href="http://127.0.0.1:5500/admin/AdminBasketList.html">장바구니 관리</a></li>
+						<li><a href="http://127.0.0.1:5500/admin/Survey.html">배송 관리</a></li>		        
+					</ul>
+				</li>
+				<li class="dropdown" style="padding-right:30px; margin-right:30px;">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">글 관리 <span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+					<li><a href="http://127.0.0.1:5500/notice/NoticeList.html">Notice - 공지사항 관리</a></li>
+					<li><a href="http://127.0.0.1:5500/faq/FaqList.html">FAQ - 자주하는 질문 관리</a></li>
+					<li><a href="http://127.0.0.1:5500/qna/QnaList.html">QnA - 묻고 답하기 관리</a></li>		            
+					<li><a href="http://127.0.0.1:5500/admin/AdminReviewList.html">Review - 이용후기 관리</a></li>		          
+					</ul>
+				</li>
+				</ul>	
+			</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
+	</div>
+</header>
+<div class="content" style="padding-top:30px; margin-top:30px; border-top:3px solid #333; min-height:500px; ">
+	<div class="container-fluid">
+		<h2>질문 및 답변</h2>
+		<table class="table">
+			<thead>
+				<tr><th>연번</th><th>제목</th><th>작성자</th><th>작성일</th></tr>
+			</thead>
+			<tbody>				
+				<tr>				
+					<td>1</td>
+					<td>
+						<a href="http://127.0.0.1:5500/qna/GetQna.html">배송은 얼마나 걸리나요?</a>
+					</td>					
+					<td>lys24</td>
+					<td>						
+						2023년 05월 17일
+					</td>
+				</tr>								
+			</tbody>
+		</table>
+		
+		<div class="btn-group">
+			<a href="http://127.0.0.1:5500/qna/A.htmlo" class="btn btn-primary">질문하기</a>
+		</div>
+		
+	</div>
+</div>
+
+<footer class="ft" style="min-height:100px; border-top:3px solid #333; margin-top:30px; padding-top:30px;">
+  <div class="container-fluid ft_wrap">
+	<p style="font-weight:bold;">Copyright © 2023 PANDAPET. All Rights Reserved.</p>
+  </div>
+</footer>
+</body>
+</html>
